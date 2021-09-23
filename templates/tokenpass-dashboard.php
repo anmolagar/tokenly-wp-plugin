@@ -36,7 +36,7 @@ if(is_user_logged_in()){
 	$tokens_balance = null;
 	$tokens_balanceSat = null;
 	
-	if($result){
+	if($result AND isset($result->asset)){
 		$tokens_asset = $result->asset;
 		$tokens_name = $result->name;
 		$tokens_balance = $result->balance;
@@ -105,7 +105,8 @@ if(is_user_logged_in()){
   </thead>
   <tbody>
 <?php
-
+/* //this doesnt work right now..
+if($result){
 foreach ($result as $key => $val){ 
 
 echo' <tr>
@@ -115,6 +116,8 @@ echo' <tr>
       <td>'.$val->balanceSat.'</td>
     </tr>';
 }
+}
+*/
 ?>
   </tbody>
 </table>
