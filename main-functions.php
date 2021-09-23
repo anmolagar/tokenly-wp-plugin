@@ -162,14 +162,17 @@ function tokenly_login_check() {
             if($_GET['logged_in'] == 'yes' ){
                 $user_email = $_GET['useremail'];
                 $message = $user_email.' you are successfully logged in.';
-                echo "<script>alert('".$message."');</script>";            
-                echo "<script>window.location.href = '/tokenly/tokenpass-dashboard';</script>";            
+                //echo "<script>alert('".$message."');</script>";            
+                echo "<script>window.location.href = '/wp-admin';</script>";            
             }
             if($_GET['user_register'] == 'yes' ){
                 $user_email = $_GET['useremail'];
-                $message = $user_email.' you are registered successfully. please check your email for credentials';
-                echo "<script>alert('".$message."');</script>"; 
-                echo "<script>window.location.href = '/';</script>";            
+                //$message = $user_email.' you are registered successfully. please check your email for credentials';
+                //echo "<script>alert('".$message."');</script>"; 
+                //echo "<script>window.location.href = '/';</script>";         
+				$message = $user_email.' you are successfully logged in.';
+                //echo "<script>alert('".$message."');</script>";            
+                echo "<script>window.location.href = '/wp-admin';</script>";      
             }
         }
     }
